@@ -1,0 +1,14 @@
+#!/usr/local/bin/python2.7
+# Challenge 148 - Combination Lock
+# http://www.reddit.com/r/dailyprogrammer/
+
+input_string = '5 1 2 3'
+input_num =map(lambda num: int(num), input_string.split())
+
+print 'done'
+sum = input_num[0]*2
+sum += 0 + input_num[1] % input_num[0]
+sum += input_num[0]
+sum += input_num[1] + (-input_num[2]) % input_num[0]
+sum += (input_num[3] - input_num[2]) % input_num[0]
+print sum
